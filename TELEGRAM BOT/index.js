@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { Telegraf } = require("telegraf");
 const { message } = require("telegraf/filters");
 
@@ -8,7 +9,7 @@ const url = "https://cricket-live-data.p.rapidapi.com/match/243299";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "d2b0e34924mshbbe813a57723fc9p125952jsn69f16e8e0e23",
+    "X-RapidAPI-Key": process.env.RAPID_API_KEY,
     "X-RapidAPI-Host": "cricket-live-data.p.rapidapi.com",
   },
 };
